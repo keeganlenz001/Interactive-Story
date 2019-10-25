@@ -6,6 +6,103 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+  <stlye>/* All css came from: https://www.sitepoint.com/simple-javascript-quiz */
+    @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+    
+    body{
+        font-size: 20px;
+        font-family: 'Work Sans', sans-serif;
+        color: #333;
+      font-weight: 300;
+      text-align: center;
+      background-color: #f8f6f0;
+    }
+    h1{
+      font-weight: 300;
+      margin: 0px;
+      padding: 10px;
+      font-size: 20px;
+      background-color: #444;
+      color: #fff;
+    }
+    .expositionAndQuestion{
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .answer {
+      margin-bottom: 20px;
+      text-align: left;
+      display: inline-block;
+    }
+    .answer label{
+      display: block;
+      margin-bottom: 10px;
+    }
+    button1{
+      font-family: 'Work Sans', sans-serif;
+        font-size: 22px;
+        background-color: #279;
+        color: #fff;
+        border: 0px;
+        border-radius: 3px;
+        padding: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    button2{
+      font-family: 'Work Sans', sans-serif;
+        font-size: 22px;
+        background-color: rgb(78, 153, 34);
+        color: #fff;
+        border: 0px;
+        border-radius: 3px;
+        padding: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    button3{
+      font-family: 'Work Sans', sans-serif;
+        font-size: 22px;
+        background-color: rgb(153, 34, 60);
+        color: #fff;
+        border: 0px;
+        border-radius: 3px;
+        padding: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    button1:hover{
+        background-color: rgb(26, 140, 175);
+    }
+    button2:hover{
+        background-color: rgb(84, 179, 30);
+    }
+    button3:hover{
+        background-color: rgb(170, 51, 51);
+    }
+    
+    
+    
+    
+    
+    .slide{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .active-slide{
+      opacity: 1;
+      z-index: 2;
+    }
+    .quiz-container{
+      position: relative;
+      height: 200px;
+      margin-top: 40px;
+    }</stlye>
 <body>
 
 <h1 style="color:rgb(233, 7, 64)">"The Pigeon" A choose your own adventure story.</h1>
