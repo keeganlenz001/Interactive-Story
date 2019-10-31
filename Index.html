@@ -49,11 +49,11 @@ const text = {
 
 function showText() {
   var currentTextId = history[history.length - 1];
-  textContainer.innerHTML = "";
+  informationContainer.innerHTML = "";
   optionContainer.innerHTML = "";
 
   for(var choice of history) {
-    buildText(text[textId].text);
+    createText(text[inforamtionId].information);
   }
 
   for(var choice of text[currentTextId].choices) {
@@ -61,20 +61,21 @@ function showText() {
   }
 }
 
-function makeOptions(decision, choice) {
+function showOptions(decision, choice) { 
+  optionContainer.appendChild(button)
+  option.innerHTML = decision;
   var option = document.creatElement("button");
   option.addEventListner("click", function() {
     history.push(choice);
     showText();
   }),
-  optionContainer.appendChild(button)
-  option.innerHTML = decision;
+ 
 }
 
-function buildText(text) {
+function createText(text) {
   var textItem = document.createElement("p");
-  textContainer.appendChild(textItem);
-  textItem.innerText = text;
+  informationContainer.appendChild(textItem);
+  informationItem.innerText = text;
 }
 
   showText();
