@@ -71,10 +71,10 @@ function showOptions(decision, choice) {
   });
 }
 
-function createText(text) {
+function createText(information) {
   var textItem = document.createElement("p");
-  informationContainer.appendChild(textItem);
-  informationItem.innerText = text;
+  textContainer.appendChild(textItem);
+  textItem.innerText = information;
 }
 
   showText();
