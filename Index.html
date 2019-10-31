@@ -1,168 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width">
-	  <title>Keegan Lenz and David Quintanilla Interactive Story</title>
-	  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Keegan Lenz and David Quintanilla Interactive Story</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-
 <body>
+    
+  <div id="headerAndCharacters">
 
-    <div id="titleAndCharacterDefinition">
+<h1>"The Pigeon" A Choose Your Own Adventure Story</h1>
 
-  <h1>"The Pigeon" an interactive story</h1>
-  
-  <h2>Story: It's a warm sunny day in the city of Paris, at the restaurant, "Le Pigeon". Who will you be?</h2>
+<h2>Story: It’s a warm sunny day in the city of Paris, at the restaurant, "Le Pigeon". Who will you be? </h2>
 
-  <h3>Peter the Pigoen: Peter is a performing pigeon who performs for a restaurant, and is trained by the trainer, but the chef seems to have some form of hatred against him.</h3>
+<h3>Peter the Pigeon: Peter is a performing pigeon who performs for a restaurant, and is trained by the trainer, but the chef seems to have some form of hatred against him.</h3>
 
-  <h3>The trainer- The trainer helps Peter get better at his performance, and teaches him new tricks. The trainer works for the restaurant, but his dream is to one day start a circus.</h3>
+<h3>The trainer- The trainer helps Peter get better at his performance, and teaches him new tricks. The trainer works for the restaurant, but his dream is to one day start a circus.</h3>
 
-  <h3>The Chef - The chef is a crooked man, who typically would have very sinister intentions against the trainer and Peter, however, with your guidance, he might have a complete change of heart.</h3>
+<h3>The Chef - The chef is a crooked man, who typically would have very sinister intentions against the trainer and Peter, however, with your guidance, he might have a complete change of heart.</h3>
 
-      </div>
-      
-      <div id="text"></div>
+<resetButton onclick="location.reload();">Restart</resetButton>
+    
+    </div>
 
-      <div id="options"></div>
+    <div id="story">
+
+    </div>
+
+    <div id="buttons">
+
+    </div>
 
 <script>
+    
+let storyContainer = document.getElementById("story");
+    
+let buttonContainer = document.getElementById("buttons");
 
-var history = ["exposistion"];
+let history = ["intro"];
 
-var textContainer = document.getElementById("text");
-
-var optionContainer = document.getElementById("options");
-
-const text = {
-  exposistion : {
-    question : "Who Will You Be?",
+const story = {
+  intro : {
+    text : "Who Will You Be?",
     choices : [
-      ["Peter", "peter1"],
-      ["Trainer", "trainer1"],
-      ["Chef", "chef1"]
+        ["Peter", "peter1"],
+        ["Trainer", "trainer1"],
+        ["Chef", "chef1"]
+    ]
+  },
+  peter1 : {
+    text : 'Peter is resting next to the trainer. “It won’t be long now,” said the trainer. “You had better get ready.” Do you get ready for the show, or do you rest for a few minutes?',
+    choices : [
+        ["Get ready for the show", "peter2a"],
+        ["Rest for a few minutes", "peter2b"]
+    ]
+  },
+  peter2a : {
+    text : "You shake your wings, and you get ready for your performance to begin. When the curtains lift, you follow your trainers commands, doing all sorts of spectacular tricks, flips, and loopty-loops. The crowd cheers astonished and amazed. The trainer offers you to go eat some dinner with him. Do you go to eat dinner with the trainer or do you eat dinner with your other pigeon friends?",
+    choices : [
+        ["Eat dinner with trainer", "peter3aa"],
+        ["Eat dinner with friends", "peter3ab"]
+      ]
+  },
+  peter2b : {
+    text : "Vitae justo eget magna fermentum iaculis eu non diam. Pellentesque elit eget gravida cum sociis natoque. Et tortor consequat id porta nibh venenatis cras sed felis. Cursus risus a.",
+    choices : [
+        ["Go to page 5", "peter3ba"],
+        ["GO to page 5", "peter3bb"]
+      ]
+  },
+
+
+
+  trainer1 : {
+    text : "The show is about to begin, and Peter the pigeon is resting at your side. Do you tell Peter to get ready for the show, or do you let Peter rest a little longer?",
+    choices : [
+        ["Tell Peter to get ready", "trainer2a"],
+        ["Let Peter rest for a little longer", "trainer2b"]
+    ]
+  },
+
+
+
+  chef1 : {
+    text : "You are making food for your customers at the restaurant Le Pigeon, when you see that one of you employees is performing a show with a pigeon.",
+    choices : [
+        ["Go to page 4", "page4"],
+        ["Go to page 5", "page5"]
     ]
   }
 }
 
-function showText() {
+function showText(){
   var currentTextId = history[history.length - 1];
-  textContainer.innerHTML = "";
-  optionContainer.innerHTML = "";
-
-  for(var choice of text[currentTextId].choices){ 
-    makeButton(choice[0], choice[1])
+  buttonContainer.innerHTML = "";
+  storyContainer.innerHTML = "";
+  
+  for(var choice of story[currentTextId].choices){ 
+    showOption(choice[0], choice[1])
   }
 
-  for(var option of history) {
-    createText(text[currentTextId].information);
+  for(var textId of history){ 
+    createStory(story[textId].information);
   }
 }
 
-function showOptions(decision, choice) {
-  var option = document.creatElement("button"); 
-  optionContainer.appendChild(option)
-  option.innerHTML = decision;
-  option.addEventListner("click", function() {
-    history.push(choice);
-    showText();
+function showOption(decision, choice){
+  var button = document.createElement("button");
+  button.innerHTML = decision;
+  buttonContainer.appendChild(button);
+  button.addEventListener ("click", function() {
+      history.push(choice);
+      showText();
   });
 }
 
-function createText(information) {
-  var textItem = document.createElement("p");
-  textContainer.appendChild(textItem);
-  textItem.innerText = information;
+function createStory(text) {
+    var storyItem = document.createElement("p");
+    storyItem.innerText = text;
+    storyContainer.appendChild(storyItem);
 }
-
+  
   showText();
-
+  
 </script>
-
+      
 <style>
+  
   @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
 
 body{
-    font-size: 20px;
-    font-family: 'Work Sans', sans-serif;
-    color: #333;
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  color: #333;
   font-weight: 300;
-  text-align: left;
+  text-align: center;
   background-color: #f8f6f0;
 }
 h1{
   font-weight: 300;
   margin: 0px;
-  padding: 10px;
+  padding: 20px;
   font-size: 20px;
   background-color: #444;
   color: #fff;
 }
-.question{
+p{
+  font-weight: 300;
+  margin: 0px;
+  padding: 20px;
   font-size: 20px;
-  margin-bottom: 0px;
-}
-.answers {
-  margin-bottom: 15px;
-  text-align: left;
-  display: inline-block;
-}
-.answers label{
-  display: block;
-  margin-bottom: 10px;
+  background-color: #333;
+  color: #fff;
 }
 button{
   font-family: 'Work Sans', sans-serif;
-    font-size: 22px;
-    background-color: #279;
-    color: #fff;
-    border: 0px;
-    border-radius: 3px;
-    padding: 10px;
-    cursor: pointer;
-    margin-bottom: 20px;
+  font-size: 22px;
+  background-color: #444;
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 button:hover{
-    background-color: #38a;
+  background-color: rgb(100,200,100);
 }
-
-button1{
+resetButton{
   font-family: 'Work Sans', sans-serif;
-    font-size: 22px;
-    background-color: rgb(200, 0, 0);
-    color: #fff;
-    border: 0px;
-    border-radius: 3px;
-    padding: 10px;
-    cursor: pointer;
-    margin-bottom: 20px;
+  font-size: 22px;
+  background-color: rgb(200,100,100);
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: px;
 }
-button1:hover{
-    background-color: rgb(255,0,0);
-}
-
-
-
-
-
-.slide{
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-.active-slide{
-  opacity: 1;
-  z-index: 2;
-}
-.quiz-container{
-  position: relative;
-  height: 200px;
-  margin-top: 40px;
+resetButton:hover{
+  background-color: rgb(255,100,100);
 }
 </style>
+
+</body>
+</html>
