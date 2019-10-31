@@ -71,6 +71,14 @@ function makeOptions(decision, choice) {
   option.innerHTML = decision;
 }
 
+function buildText(text) {
+  var textItem = document.createElement("p");
+  textContainer.appendChild(textItem);
+  textItem.innerText = text;
+}
+
+  showText();
+
 </script>
 
 <style>
