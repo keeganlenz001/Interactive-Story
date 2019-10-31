@@ -65,7 +65,7 @@ function makeOptions(decision, choice) {
   var option = document.creatElement("button");
   option.addEventListner("click", function() {
     history.push(choice);
-    showStory();
+    showText();
   }),
   optionContainer.appendChild(button)
   option.innerHTML = decision;
