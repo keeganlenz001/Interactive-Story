@@ -54,11 +54,21 @@ function showText() {
 
   for(var textId of history) {
     buildText(text[textId].text);
-
-    for(var choice of text[currentTextId].choices) {
-      makeButton(choice[0], choice[1])
-    }
   }
+
+  for(var choice of text[currentTextId].choices) {
+    makeButton(choice[0], choice[1])
+  }
+}
+
+function makeOptions(decision, choice) {
+  var option = document.creatElement("button");
+  option.addEventListner("click", function() {
+    history.push(choice);
+    showStory();
+  }),
+  optionContainer.appendChild(button)
+  option.innerHTML = decision;
 }
 
 </script>
