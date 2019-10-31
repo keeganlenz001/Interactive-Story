@@ -47,6 +47,20 @@ const text = {
   }
 }
 
+function showText() {
+  var currentTextId = history[history.length - 1];
+  textContainer.innerHTML = "";
+  optionContainer.innerHTML = ""
+
+  for(var textId of history) {
+    buildText(text[textId].text);
+
+    for(var choice of text[currentTextId].choices) {
+      makeButton(choice[0], choice[1])
+    }
+  }
+}
+
 </script>
 
 <style>
