@@ -16,34 +16,34 @@
 		<div id="quiz"></div>
 	</div>
 	<button id="next">Continue</button>
-  <button1 id="submit" onclick = "window.location.href = 'https://Testing-proper-form-of-choose-your-own-adventure--keeganlenz.repl.co'">Finish</button1>
+  <button1 id="submit" onclick ="location.reload();">Finish</button1>
 <div id="results"></div>
 
 <script>
 (function() {
   const myQuestions = [
     {
-      question: 'Story: It’s a warm sunny day in the city of Paris, at the restaurant, "Le Pigeon". Who will you be?',
+      story: 'Story: It’s a warm sunny day in the city of Paris, at the restaurant, "Le Pigeon". Who will you be?',
       answers: {
       },
     },
     {
-      question: "Peter the Pigeon - Peter is a performing pigeon who performs for a restaurant, and is trained by the trainer, but the chef seems to have some form of hatred against him.",
+      peterIntro: "Peter the Pigeon - Peter is a performing pigeon who performs for a restaurant, and is trained by the trainer, but the chef seems to have some form of hatred against him.",
       answers: {
       },
     },
     {
-      question: "The trainer - The trainer helps Peter get better at his performance, and teaches him new tricks. The trainer works for the restaurant, but his dream is to one day start a circus.",
+      trainerIntro: "The trainer - The trainer helps Peter get better at his performance, and teaches him new tricks. The trainer works for the restaurant, but his dream is to one day start a circus.",
       answers: {
       },
     },
     {
-      question: "The Chef - The chef is a crooked man, who typically would have very sinister intentions against the trainer and Peter, however, with your guidance, he might have a complete change of heart. Who will you be?",
+      chefIntro: "The Chef - The chef is a crooked man, who typically would have very sinister intentions against the trainer and Peter, however, with your guidance, he might have a complete change of heart. Who will you be?",
       answers: {
       },
     },
     {
-      question: "Who will you be?",
+      characterChoice: "Who will you be?",
       answers: {
         a: "Peter",
         b: "Trainer",
@@ -51,7 +51,7 @@
       },
     },
     {
-      question: "Do you rest?",
+      peter1: "Do you rest?",
       answers: {
         a: "Rest",
         b: "Don't rest",
