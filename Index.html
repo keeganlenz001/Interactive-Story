@@ -52,11 +52,12 @@ function showText() {
   textContainer.innerHTML = "";
   optionContainer.innerHTML = "";
 
-  for(var choice of text[currentTextId].choices) {
-    makeOption(choice[0], choice[1])
+  for(var choice of story[currentTextId].choices){ 
+    makeButton(choice[0], choice[1])
   }
+  
   for(var option of history) {
-    createText(text[inforamtionId].information);
+    createText(text[currentTextId].information);
   }
 }
 
