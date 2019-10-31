@@ -42,7 +42,7 @@ let history = ["intro"];
 
 const story = {
   intro : {
-    questoin : "Who Will You Be?",
+    characterSelection : "Who Will You Be?",
     choices : [
         ["Peter", "peter1"],
         ["Trainer", "trainer1"],
@@ -116,9 +116,9 @@ function showOption(decision, choice){
   });
 }
 
-function createStory(text) {
+function createStory(story) {
     var storyItem = document.createElement("p");
-    storyItem.innerText = text;
+    storyItem.innerText = story;
     storyContainer.appendChild(storyItem);
 }
   
