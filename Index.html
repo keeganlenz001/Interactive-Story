@@ -108,8 +108,8 @@ function showOption(decision, choice){
   button.innerHTML = decision;
   buttonContainer.appendChild(button);
   button.addEventListener ("click", function() {
-      history.push(choice);
-      showText();
+    history.push(choice);
+    showText();
   });
 }
 
@@ -124,9 +124,9 @@ button.addEventListener ("click", function() {
 });
 
 function createText(story) {
-    var storyItem = document.createElement("p");
-    storyItem.innerText = story;
-    storyContainer.appendChild(storyItem);
+  var storyItem = document.createElement("p");
+  storyItem.innerText = story;
+  storyContainer.appendChild(storyItem);
 }
   
   showText();
