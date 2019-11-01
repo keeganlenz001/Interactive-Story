@@ -41,7 +41,7 @@ let buttonContainer = document.getElementById("buttons");
 
 const story = {
   exposistion : {
-    text : "Who Will You Be?",
+    question : "Who Will You Be?",
     choices : [
         ["Peter", "peter1"],
         ["Trainer", "trainer1"],
@@ -49,20 +49,23 @@ const story = {
     ]
   },
   peter1 : {
-    text : 'Peter is resting next to the trainer. “It won’t be long now,” said the trainer. “You had better get ready.” Do you get ready for the show, or do you rest for a few minutes?',
+    text : 'Peter is resting next to the trainer. “It won’t be long now,” said the trainer. “You had better get ready.” ',
+    question :"Do you get ready for the show, or do you rest for a few minutes?"
     choices : ["Get ready"  "Rest"]
         ["Get ready for the show", "peter2a"],
         ["Rest for a few minutes", "peter2b"]
     ]
   },
   peter2a : {
-    text : "You shake your wings, and you get ready for your performance to begin. When the curtains lift, you follow your trainers commands, doing all sorts of spectacular tricks, flips, and loopty-loops. The crowd cheers astonished and amazed. The trainer offers you to go eat some dinner with him. Do you go to eat dinner with the trainer or do you eat dinner with your other pigeon friends?",
+    text : "You shake your wings, and you get ready for your performance to begin. When the curtains lift, you follow your trainers commands, doing all sorts of spectacular tricks, flips, and loopty-loops. The crowd cheers astonished and amazed. The trainer offers you to go eat some dinner with him.",
+    question : "Do you go to eat dinner with the trainer or do you eat dinner with your other pigeon friends?"
     choices : ["Eat with pigeon friends"  "Eat with trainer"]
         ["Eat dinner with trainer", "peter3aa"],
         ["Eat dinner with friends", "peter3ab"]
       ]
       peter3aa : {
-        text : "You eat with you trainer, and he comments on how good you have gotten at performing.He asks you if you think you and him should start a circus. Do you want to start a circus or continue performing for the restaurant?"
+        text : "You eat with you trainer, and he comments on how good you have gotten at performing.He asks you if you think you and him should start a circus."
+        question :  "Do you want to start a circus or continue performing for the restaurant?"
         choices : ["Start a circus" "Perform for restaurant"]
         ["Start a circus","peter4aba"],
         ["Perform for restraunt","peter4abb"]
@@ -70,10 +73,11 @@ const story = {
       }
   },
   peter2b : {
-    text : "Vitae justo eget magna fermentum iaculis eu non diam. Pellentesque elit eget gravida cum sociis natoque. Et tortor consequat id porta nibh venenatis cras sed felis. Cursus risus a.",
-    choices : [
-        ["Go to page 5", "peter3ba"],
-        ["GO to page 5", "peter3bb"]
+    text : "You ignore your trainer, and decide to rest just a few more minutes. The curtains lift and you are unprepared to do your performance. You quickly get up and do the best you can, but the audience is not very impressed. “It’s ok Peter.” says the trainer reassuringly. “You’ll do better next time.” The trainer asks if you would like to start training more so that you will be ready for the next performance."
+    question : "Do you decline or accept this proposal?",
+    choices : ["Accept" "Decline"]
+        ["Accept", "peter3ba"],
+        ["Decline", "peter3bb"]
       ]
   },
 
@@ -94,6 +98,7 @@ const story = {
     choices : ["Watch"buttonContainer  "Don’t watch"buttonContainer]
         ["Go to page 4", "page4"],
         ["Go to page 5", "page5"]
+  },
     ]
   }
 }
@@ -108,7 +113,7 @@ function showText(){
   }
 
   for(var textId of history){ 
-    createText(story[textId].text);
+    createText(story[textId].question);  //text
   }
 }
 
