@@ -24,7 +24,7 @@
     
     </div>
 
-    <div id="story">
+    <div id="exposistion">
 
     </div>
 
@@ -35,13 +35,13 @@
 <script>
 let history = ["exposistion"];
 
-let storyContainer = document.getElementById("story");
+let storyContainer = document.getElementById("exposistion");
     
 let buttonContainer = document.getElementById("buttons");
 
 const story = {
   exposistion : {
-    characterSelection : "Who Will You Be?",
+    text : "Who Will You Be?",
     choices : [
         ["Peter", "peter1"],
         ["Trainer", "trainer1"],
@@ -101,7 +101,7 @@ function showText(){
   }
 
   for(var textId of history){ 
-    createStory(story[textId].information);
+    createText(story[textId].text);
   }
 }
 
@@ -115,7 +115,14 @@ function showOption(decision, choice){
   });
 }
 
-function createStory(story) {
+function resetButton(){
+  var button = document.createElement("resetButton");
+  button.addEventListener ("click", function() {
+      location.reload();
+  });
+}
+
+function createText(story) {
     var storyItem = document.createElement("p");
     storyItem.innerText = story;
     storyContainer.appendChild(storyItem);
