@@ -19,8 +19,6 @@
 <h3>The trainer- The trainer helps Peter get better at his performance, and teaches him new tricks. The trainer works for the restaurant, but his dream is to one day start a circus.</h3>
 
 <h3>The Chef - The chef is a crooked man, who typically would have very sinister intentions against the trainer and Peter, however, with your guidance, he might have a complete change of heart.</h3>
-
-<resetButton onclick="location.reload();">Restart</resetButton>
     
     </div>
 
@@ -115,12 +113,17 @@ function showOption(decision, choice){
   });
 }
 
-function resetButton(){
-  var button = document.createElement("resetButton");
-  button.addEventListener ("click", function() {
-      location.reload();
-  });
-}
+var button = document.createElement("resetButton");
+button.innerHTML = "Restart";
+
+// 2. Append somewhere
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+// 3. Add event handler
+button.addEventListener ("click", function() {
+  location.reload();
+});
 
 function createText(story) {
     var storyItem = document.createElement("p");
