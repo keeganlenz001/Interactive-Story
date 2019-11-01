@@ -49,7 +49,7 @@ const story = {
   peter1 : {
     text : 'Peter is resting next to the trainer. “It won’t be long now,” said the trainer. “You had better get ready.” ',
     question :"Do you get ready for the show, or do you rest for a few minutes?"
-    choices : ["Get ready"  "Rest"]
+    choices : [
         ["Get ready for the show", "peter2a"],
         ["Rest for a few minutes", "peter2b"]
     ]
@@ -64,16 +64,14 @@ const story = {
       peter3aa : {
         text : "You eat with you trainer, and he comments on how good you have gotten at performing.He asks you if you think you and him should start a circus."
         question :  "Do you want to start a circus or continue performing for the restaurant?"
-        choices : ["Start a circus" "Perform for restaurant"]
+        choices : [
         ["Start a circus","peter4aba"],
         ["Perform for restraunt","peter4abb"]
-]
-      }
-  },
+      ]
+    },
   peter2b : {
-    text : "You ignore your trainer, and decide to rest just a few more minutes. The curtains lift and you are unprepared to do your performance. You quickly get up and do the best you can, but the audience is not very impressed. “It’s ok Peter.” says the trainer reassuringly. “You’ll do better next time.” The trainer asks if you would like to start training more so that you will be ready for the next performance."
-    question : "Do you decline or accept this proposal?",
-    choices : ["Accept" "Decline"]
+    question : "You ignore your trainer, and decide to rest just a few more minutes. The curtains lift and you are unprepared to do your performance. You quickly get up and do the best you can, but the audience is not very impressed. “It’s ok Peter.” says the trainer reassuringly. “You’ll do better next time.” The trainer asks if you would like to start training more so that you will be ready for the next performance. Do you decline or accept this proposal?",
+    choices : [
         ["Accept", "peter3ba"],
         ["Decline", "peter3bb"]
       ]
@@ -83,7 +81,7 @@ const story = {
 
   trainer1 : {
     text : "The show is about to begin, and Peter the pigeon is resting at your side. Do you tell Peter to get ready for the show, or do you let Peter rest a little longer?",
-    choices : ["Get ready"  "Let Peter rest"]
+    choices : [
         ["Tell Peter to get ready", "trainer2a"],
         ["Let Peter rest for a little longer", "trainer2b"]
     ]
@@ -92,11 +90,10 @@ const story = {
 
 
   chef1 : {
-    text : "You are making food for your customers at the restaurant Le Pigeon, when you see that one of you employees is performing a show with a pigeon.Do you watch the show, or do you continue making food?"
-    choices : ["Watch"buttonContainer  "Don’t watch"buttonContainer]
+    question : "You are making food for your customers at the restaurant Le Pigeon, when you see that one of you employees is performing a show with a pigeon.Do you watch the show, or do you continue making food?"
+    choices : [
         ["Go to page 4", "page4"],
         ["Go to page 5", "page5"]
-  },
     ]
   }
 }
