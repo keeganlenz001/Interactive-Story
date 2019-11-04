@@ -521,7 +521,7 @@ function showText(){
   buttonContainer.innerHTML = "";
   storyContainer.innerHTML = "";
   
-  for(var choice of story[currentTextId].choices){ 
+  for(var choice of story[currentTextId].choices){ //assigns story choice or character to be used and shown during story progress
     showOption(choice[0], choice[1])
   }
 
