@@ -532,8 +532,8 @@ function showText(){
 
 function showOption(decision, choice){
   var button = document.createElement("button");
-  button.innerHTML = decision;
   buttonContainer.appendChild(button);
+  button.innerHTML = decision;
   button.addEventListener ("click", function() {
     history.push(choice);
     showText();
