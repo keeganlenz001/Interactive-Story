@@ -58,7 +58,6 @@ const story = {
         ["Rest for a few minutes", "peter2b"]
     ]
   },
-
   peter2a : {
     question : "You shake your wings, and you get ready for your performance to begin. When the curtains lift, you follow your trainers commands, doing all sorts of spectacular tricks, flips, and loopty-loops. The crowd cheers astonished and amazed. The trainer offers you to go eat some dinner with him. Do you go to eat dinner with the trainer or do you eat dinner with your other pigeon friends?",
     choices : [
@@ -66,7 +65,6 @@ const story = {
         ["Eat dinner with friends", "peter3ab"]
     ]
   },
-
   peter2b : {
     question : "You ignore your trainer, and decide to rest just a few more minutes. The curtains lift and you are unprepared to do your performance. You quickly get up and do the best you can, but the audience is not very impressed. “It’s ok Peter.” says the trainer reassuringly. “You’ll do better next time.” The trainer asks if you would like to start training more so that you will be ready for the next performance. Do you decline or accept this proposal?",
     choices : [
@@ -74,7 +72,6 @@ const story = {
         ["Decline", "peter3bb"]
       ]
   },
-
     peter3aa : {
       question : "You eat with you trainer, and he comments on how good you have gotten at performing.He asks you if you think you and him should start a circus. Do you want to start a circus or continue performing for the restaurant?",
       choices : [
@@ -99,14 +96,97 @@ const story = {
     ]
   },
 
-  peter4baa : {
-    question : "",
+  peter3bb : {
+    question : "The trainer thinks for a moment. He said to you that that was okay, and that he was starving. He offers you to eat with him, but ultimately decides that you should go eat with you friends. You fly over to a perch where there are many other pigeons. You all tell jokes, sing, and feast upon the tasty bread, which the trainer provided. You continue talking and you begin to notice that many of you friends have talked about other pigeons mysteriously going missing. When it’s time to go home, your trainer calls for you, but you are very worried as to what happened to the missing pigeons. Do you go to your trainer, or do you continue talking with your friends? ",
     choices : [
-      [],
-      []
+      ["Continue talking to your friends", "peter4aaa"],
+      ["Go with your trainer", "peter4aab"]
     ]
   },
 
+  peter4aaa : {
+    question : "You know you should probably go with your trainer, but this is more important. Your friends continue talking, but eventually they all go back home, however you stay, so that your trainer knows where you are. You fall asleep on the perch, when a loud noise suddenly wakes you up. Do you investigate the noise?",
+    choices : [
+      ["Investigate noise", "peter5aaaa"],
+      ["Do not investigate noise", "peterEnd5aaab"]
+    ]
+  },
+
+  peter4aab : {
+    question : "As much as you want to hear what your pigeons friends had to say about the mysterious disappearances, you go with your trainer. When you get on the trainer’s shoulder, he looks over, and can tell something is wrong. He asks what the matter is, but you keep quiet. You look behind you and see the silhouette of something in the distance. Your not sure if it’s something to worry about, but you feel uneasy about it. Do you tell the trainer, or do you stop letting your imagination get the best of you?",
+    choices : [
+      ["Warn the trainer", "peterEnd5aaba"],
+      ["Think nothing of it", "peterEnd5aabb"]
+    ]
+  },
+
+  peter4aba : {
+    question : "After careful thought and consideration you finally come to the conclusion that creating a circus would be great. The trainer jumps up in joy, glad that you agreed. The trainer then asks when they should leave. Do you want to leave tonight or pack up all of your things and say a proper goodbye(leave tomorrow morning).",
+    choices : [
+      ["Leave tonight", "peterEnd5abaa"],
+      ["Say goodbye to everyone next morning", "peterEnd5abab"]
+    ]
+  },
+
+  peter4abb : {
+    question : "As much as you would like to be in a circus, you ultimately decide that you would rather keep performing for the restaurant. The trainer agrees, but he does not seem very enthusiastic about it. The night continues on, and soon it’s closing time. Suddenly you hear a loud noise. You want to go investigate the noise, but your not sure what the noise was, and whether or not it was dangerous. What do you do?",
+    choices : [
+      ["Investigate the noise", "peter5aaaa"],
+      ["Do not investigate the noise", "peterEnd5aaab"]
+    ]
+  },
+
+  peter5aaaa : {
+    question : "You look towards the noise and you see the chef out by the bird bath. Just then you also notice the trainer is back at the restaurant. The trainer goes over to the chef. Do you go over to the trainer, or do you watch from afar?",
+    choices : [
+      ["Go to the trainer", "peterEnd6aaaaa"],
+      ["Watch from afar", "peterEnd6aaaab"]
+    ]
+  },
+
+  peterEnd5aaba : {
+    question : "Although you are almost certain the silhouette is nothing, you warn your trainer who turns around to see the chef running towards the both of you. The trainer begins running away, and eventually the chef loses you two. The trainer is out of breath, and he makes the decision that you two shall start a circus, as the trainer refuses to work for someone who chased down a street in the middle of the night. Together the two of you have a great time in the circus, and you spectacular flight capabilities brings large audiences each and every night. (You perform in the circus)",
+    choices : [
+    ]
+  },
+
+  peterEnd5abaa : {
+    question : "You and the trainer ultimately decide it would be for the better, that you get a jumpstart on creating the circus. The trainer packs up his things and the two of you head out into the country. The chef never hears from either of you again, and you and the trainer have the time of your lives performing for large crowds. (You perform in the circus)",
+    choices : [
+    ]
+  },
+
+  peterEnd5abab : {
+    question : "The next morning, the trainer goes to say goodbye to the chef, but he does not seem very happy about it at all. He insists that the trainer and you should have one last meal before you go. As an accommodation, he says he will let you see how he cooks the food. The trainer agrees, and you head into the kitchen with him. He then says to the trainer in a very quiet and sinister tone, “I don’t believe you will be leaving here this morning, circus boy.” Your confused for a moment, but your confusion quickly turns to terror, as he grabs you and the trainer and throws you both into the freezer. You try to escape, but the door is locked. You both slowly begin to freeze to death. (You perish in the freezer)",
+    choices : [
+    ]
+  },
+
+  peterEnd5aaab : {
+    question : "The noise startled you, but it’s not long before you are resting peacefully again. When you wake up, you patiently wait for the trainer to arrive at the restaurant, but he never comes. You are sad and scared. (Premature ending)",
+    choices : [
+    ]
+  },
+
+  peterEnd5aabb : {
+    question : "You continue looking at the strange silhouette and conclude that is merely a figment of your imagination. However, only moments later you double check, just to make sure. When you look behind you, you see the chef chasing after the trainer. You warn the trainer and he begins running as fast as he can, but you warned him too late, and the chef is just barely able to grab you off the trainers shoulder. You are held prisoner by the chef, and you never see the trainer again. (A circus without Peter)",
+    choices : [
+    ]
+  },
+
+  peterEnd6aaaaa : {
+    question : "You wonder what is going on, so you fly over to the trainer and rest on his shoulder. The trainer is happy to see you, but the chef seems to be very angry about something. The trainer abruptly ends whatever conversation they were having, and tells the chef that they were leaving. The trainer left with Peter quickly as he was clearly scared of something; you assume the chef. The trainer later tells you and him will be starting a circus, and you do not argue, as you would never want to perform in a place where the trainer was not comfortable. As time goes on you come to like very idea very much, and together you live happily performing for large crowds. (You perform in the circus)",
+    choices : [
+    ]
+  },
+
+  peterEnd6aaaab : {
+    question : "You decide not to fly over and you watch from a safe distance. The trainer and the chef appear to be arguing about something, and the argument is getting more heated by the minute. The chef then hits the trainer, and the trainer is knocked unconscious. The chef then drags the trainer into the kitchen of the restaurant, and you follow. The chef notices and he snatches you in mid air. You try to break free from his grasp, but he is too strong. He then tosses you and the chef into the freezer, and locks the door. You and the trainer try to escape, but it’s no use. (You perish in the freezer)",
+    choices : [
+    ]
+  },
+
+  
 
 
   trainer1 : {
@@ -117,13 +197,320 @@ const story = {
     ]
   },
 
+  trainer2a : {
+    question : "You tell Peter to get ready, and he shakes a little and waits for your command. The curtains rise, and you make all sorts of complicated gestures, and Peter follows all you signals, and does an abundance of spectacular tricks. A loud cheer is sounded from the crowd. You want to reward Peter. Do you give Peter his favorite treat, or do you let Peter go play with his friends?",
+    choices : [
+      ["Give Peter a treat", "trainer3aa"],
+      ["Let Peter go play with his friends", "trainer3ab"]
+    ]
+  },
+
+  trainer3aa : {
+    question : "You knew Peter deserved something special for doing such a good job in the performance, so you give him a favorite treat. He eats it quickly, and chirps to show his appreciation. While he’s eating it you think to yourself how much you would like to start a circus, and you know that after seeing Peter tonight, Peter would be good enough. Do you tell Peter about your plans to start a circus, or do you let him enjoy the rest of his night?",
+    choices : [
+      ["Tell Peter about your plans", "trainer4bba"],
+      ["Say nothing", "trainer4bbb"]
+    ]
+  },
+
+  trainer3ab : {
+    question : "After such a good performance, you let Peter go have fun. You see him fly off over to his pigeon friends, and meanwhile, you go get yourself something to eat. A few hours later you return with a full stomach. You call for Peter, but he doesn’t come. You suspect he went to the bird bath, but you are not allowed back there. Do you continue calling for Peter, or do you go to the bird bath.",
+    choices : [
+      ["Continue calling for Peter", "trainerEnd4aba"],
+      ["Go to the bird bath", "trainer4abb"]
+    ]
+  },
+
+  trainerEnd4aba : {
+    question : "You keep calling for Peter, but nothing happens. How could this happen? You had only left him along for a few moments. You began to panic and tears run down your face. You never see Peter again, but you still start a circus in honor of his memory. However, to you it’s no circus worth having without Peter. (A circus without Peter)",
+    choices : [
+    ]
+  },
+
+  trainer4abb : {
+    question : "You goes past the gate that read in big bold, “CHEF ONLY”, but you did not care. You looked towards the bird bath to see Peter drinking the water. You call for him, but just as you do, the chef bursts out the backdoor entrance of the restaurant. The chef then grabs Peter and begins running at you. Do you run away or you attempt to save Peter?",
+    choices : [
+      ["Run away", "trainerEnd5abba"],
+      ["Attempt to save Peter", "trainer5abbb"]
+    ]
+  },
+
+  trainerEnd5abba : {
+    question : "You run from the chef, knowing that you could not save Peter. You escape, but just barely. As time goes on you find yourself regretting this decision, you loved Peter, and now he was gone forever. You started a circus, but It didn’t help, nothing could mend the deep hole in your heart. (A circus without Peter)",
+    choices : [
+    ]
+  },
+
+  trainer5abbb : {
+    question : "You charge at the chef, and all fear has left your body, for all you want is Peter back in your arms. By some miracle, you managed to snatch Peter from the chef’s hand and you begin running as fast as your legs will take you. Just as you think that you escaped, you feel a strong tug on you collar. The chef has grabbed you. Do you let go of Peter so that he might escape, or do you try to escape too?",
+    choices : [
+      ["Let Peter go", "trainerEnd6abbba"],
+      ["Try to escape", "trainer6abbbb"]
+    ]
+  },
+
+  trainerEnd6abbbb : {
+    question : "You begin trying to pry free from the chef’s grip, and for a moment you think he might let go, but he doesn’t. He grabs peter from your hand, and he drags you along, back into the restaurant. You beg him to give Peter back to you, but he ignores you. He tosses you, along with Peter, into the freezer. The chef then locks you both in and the two of you slowly begin to freeze to death. (You perish in the freezer)",
+    choices : [
+    ]
+  },
+
+  trainer2b : {
+    question : "Before you know it, it’s time for the show, and Peter is not prepared. You quickly wake him up, but he is still dazed, and he doesn’t do the tricks very well. The crowd is not impressed. Your upset at yourself for not waking Peter up in time. To make it up to him, you decide you will do something for Peter. Do you have him eat with you and have good food, or do you tell him to go have fun and eat with his friends, but it’s not as good food.",
+    choices : [
+      ["Let Peter eat with you", "trainer3ba"],
+      ["Let Peter eat with his friends", "trainer3bb"]
+    ]
+  },
+
+  trainer3ba : {
+    question : "You tell Peter that because he did so good during practice, he can eat with you tonight. You give him some bread, and you begin talking to Peter about how much you want to start a circus, in fact, there is nothing more in the world you would rather do than start a circus. Before you know it, it’s closing time. You ask what Peter thinks about the idea, and he seems to agree. As much as you want to start a circus, though, you know you should probably tell the chef that you will be quitting. Do you tell the chef?",
+    choices : [
+      ["Tell the chef", "trainerEnd4baa"],
+      ["Leave without telling the chef", "trainerEnd4bab"]
+    ]
+  },
+
+  trainerEnd4baa : {
+    question : "The next morning, you go tell the chef that you will be starting a circus, but he does not seem very happy about it at all. He insists you and Peter should have one last meal before you go. As an accommodation, he says he will let you see how he cooks the food. You agree, and you head into the kitchen with him. He then says to you in a very quiet and sinister tone, “I don’t believe you will be leaving here this morning, circus boy.” Your confused for a moment, but your confusion quickly turns to terror, as he grabs you and Peter. He then throws you both into the freezer. You try to escape, but the door is locked. You and Peter both slowly begin to freeze to death. (You perish in the freezer)",
+    choices : [
+    ]
+  },
+
+  trainerEnd4bab : {
+    question : "You ultimately decide it would be for the better, that you get a jumpstart on creating the circus. You pack up your things and you and Peter head out into the country. The chef never hears from either of you again, and you and Peter have the time of your lives performing for large crowds. (You perform in the circus)",
+    choices : [
+    ]
+  },
+
+  trainer3bb : {
+    question : "You let Peter go eat with his friends, and you keep a watchful eye on him while he eats. When it’s time to go, you signal Peter to come. He flys over to you and on the walk home, you begin thinking about the performance that day. You know it was a bad performance today, but you also know that Peter is fantastic at flying and that he was good enough to perform for a circus. It has always  been you dream to start a circus. Do you tell Peter?",
+    choices : [
+      ["Tell Peter", "trainer4bba"],
+      ["Do not tell Peter", "trainerEnd4bbb"]
+    ]
+  },
+
+  trainer4bba : {
+    question : "You tell Peter your plans of starting a circus, and after a short while, he begins to seem to like the idea. He ultimately agrees with you. Your eager to go and start a circus, but you also know you should probably say a proper goodbye, and leave tomorrow morning. Do you leave right now, or tomorrow morning?",
+    choices : [
+      ["Leave now", "trainerEnd4bab"],
+      ["Leave tomorrow", "trainerEnd4baa"]
+    ]
+  },
+
+  trainerEnd4bbb : {
+    question : "As much as you want to tell Peter about your ideas of starting a circus, you don’t think he will agree. You continue throughout you lives each day doing the performances better and better, but you care less and less. (A circus without Peter)",
+    choices : [
+    ]
+  },
+
+
 
 
   chef1 : {
     question : "You are making food for your customers at the restaurant Le Pigeon, when you see that one of you employees is performing a show with a pigeon.Do you watch the show, or do you continue making food?",
     choices : [
-        ["Go to page 4", "page4"],
-        ["Go to page 5", "page5"]
+        ["Watch the show", "chef2a"],
+        ["Continue making food", "chef2b"]
+    ]
+  },
+
+  chef2a : {
+    question : "You continue watching the show, and the tricks begin to amaze you. You then look down at the food you are cooking and your smile begins to disappear back into a frown. You’re glad you enjoyed watching the show, even if you know you cooking was more important. Soon the restaurant's closing time comes. Do you stay at the restaurant or do you go to your home?",
+    choices : [
+      ["Stay at the restaurant", "chef3b"],
+      ["Go home", "chef3a"]
+    ]
+  },
+
+  chef2b : {
+    question : "You see that your employee is doing a ridiculous show, and you don’t have the time of day to spare him any attention. After all, everything would be much better if he wasn’t wasting time with that awful pigeon. You’re glad you didn’t bother watching the show, and your cooking was much more important anyways. Soon the restaurant's closing time comes. Do you stay at the restaurant or do you go to your home?",
+    choices : [
+      ["Stay at the restaurant", "chef3b"],
+      ["Go home", "chef3a"]
+    ]
+  },
+
+  chef3a : {
+    question : "You lock the restaurant, and walk to your apartment building. You climb the stairs to the highest floor. You walk in to see a rickety old apartment that is very small, but in it lies a large window which reveals a beautiful overlook of Paris and the now lit up the Eiffel Tower. You look at the impressive view for a few moments when you stomach starts to rumble, but you are tired. Do you make dinner, or do you go to sleep.",
+    choices : [
+      ["Make dinner", "chef4aa"],
+      ["Go to sleep", "chef5aab"]
+    ]
+  },
+
+  chef3b : {
+    question : "You stay at the restaurant, so that you can clean up and wait for pigeons to come by the birdbath. You’re busy cleaning up, when you hear a loud sound coming from outside. Do you go to investigate the noise, or do you ignore the sound and continue sweeping the floors?",
+    choices : [
+      ["Investigate the noise", "chef4ba"],
+      ["Continue sweeping", "chef4bb"]
+    ]
+  },
+
+  chef4aa : {
+    question : "You were starving, so you open your fridge, and pull out a frozen pigeon. You warm it up and begin cooking just the way you like it. You bite into it and begin chewing on the delicious squab. You then begin to head back to your bed to go to sleep when you look out your window to see the trainer coming into the restaurant, but he has no business being there this late. Do you ignore this and go to sleep, or do you go to see what the trainer is up to?",
+    choices : [
+      ["Go to sleep", "chef5aab"],
+      ["Go to restaurant", "chef6abaa"]
+    ]
+  },
+
+  chef5aab : {
+    question : "You go to sleep, admiring the view of Paris, as your eyes slowly grow heavier, and you fall asleep. When you wake up you are hungry so you decide to make some breakfast. Do you make some eggs, or do you prepare some fresh pigeon from your fridge?",
+    choices : [
+      ["Make eggs", "chef5aba"],
+      ["Make squab", "chef5abb"]
+    ]
+  },
+
+  chef5aba : {
+    question : "You open your fridge to reveal several pigeons. You look at them and you begin to feel a deep sadness within you that you have never felt before. You no longer like the taste of pigeon after what has happened today, and you instead crack some eggs and get ready to go to the restaurant. After you finish eating your eggs, you look out your window one last time, but something you see surprises you. The trainer is already there even though it’s early in the morning. Do you rush down to the restaurant to see what is going on or do you continue your day as if you didn’t see it?",
+    choices : [
+      ["Go to the restaurant", "chef6abaa"],
+      ["Continue your day", "chefEnd6abab"]
+    ]
+  },
+
+  chefEnd6abab : {
+    question : "As curious as you are about the trainer, you would rather busy yourself with you own worries. You eventually make your way down to the restaurant, and by the time you get there, the trainer is getting ready to leave. When you ask him where he is going, he tells you that he is going to start a circus. You wish him luck and head back to the kitchen to start making some food. You and the trainer are still good friends to this day. (Premature ending)",
+    choices : [
+    ]
+  },
+
+  chef6abaa : {
+    question : "You go to the restaurant, eager to see what the trainer is doing. Once you get there you see the trainer looking around and grabbing some items. You ask him what he is doing, and he tells you that he was packing up his things, as he was going to start a circus with Peter. You ask the trainer if you could join, and he says the more people the better. Do you join?",
+    choices : [
+      ["Join circus", "chefEnd7abaaa"],
+      ["Kindly decline", "chefEnd7abaab"]
+    ]
+  },
+
+  chefEnd7abaaa : {
+    question : "You join the circus, and together, you, the trainer, and Peter have a terrific time at the circus, as you too learn to train Pigeons to do tricks. (You perform in the circus)",
+    choices : [
+    ]
+  },
+
+  chefEnd7abaab : {
+    question : "As much as you would like to join the circus, someone has to cook the food at the restaurant. The trainer heads off on his way with Peter, and you are still good friends with him to this day. (Premature ending)",
+    choices : [
+    ]
+  },
+
+  chef5abb : {
+    question : "You open your fridge, and your mouth begins to water as you pull out a frozen pigeon. You put it on the stove and cook it just the way you like it. As your eating the squab, you look out the window to see the trainer at the restaurant, but he has no business being there this early. You fill yourself fill with rage. You rush down to the restaurant to comfort the trainer. Do you ask the trainer what he is doing, or do you follow him around to find out yourself?",
+    choices : [
+      ["Confront the trainer", "chefEnd6abba"],
+      ["Follow the trainer", "chef6abbb"]
+    ]
+  },
+
+  chefEnd6abba : {
+    question : "You run over to the trainer and begin questioning him. He says he was looking for his pigeon Peter, but you do not believe him. You continue asking and as you do you get angrier and angrier. You suddenly remember that you had previously eaten a pigeon, and you begin to fear that it was Peter that you ate. You abruptly end the conversation and head back into the restaurant. The trainer, out of curiosity, follows you to see what you are up to, but you do not notice. You head into the freezer to pull out some pigeons to begin cooking for the customers, but as you turn around, you see the trainer close the freezer door behind you, with a terrified look on his face. (You perish in the freezer)",
+    choices : [
+    ]
+  },
+
+  chef6abbb : {
+    question : "You begin watching the trainer from afar. He is calling for his pigeon Peter. At that moment you think back to your breakfast and terrified look appears on you face. You begin sweating as you know the trainer will soon find out. Heart is beating rapidly and you head back into the restaurant and begin making food just the way you had before, but as time goes on your paranoia continues, until one day the trainer leaves. He was extremely sad when pronouncing that he was quitting, he said that he was going to go look for Peter, and that he would start a circus so that he might become famous, and Peter could find him. Do you tell the trainer what you did?",
+    choices : [
+      ["Tell the trainer", "chefEnd7abbba"],
+      ["Do not tell the trainer", "chefEnd7abbbb"]
+    ]
+  },
+
+  chefEnd7abbba : {
+    question : "The trainer is devastated. It is not long before you are in jail, but you know you did the right thing. The trainer started his circus, but it was not a circus to him without Peter. (A circus without Peter)",
+    choices : [
+    ]
+  },
+
+  chefEnd7abbbb : {
+    question : "The trainer heads off and starts his circus, looking for Peter for the rest of his days. You are at first glad that you did not tell him, however as time goes on your guilt increases until you can no longer handle it. You lock yourself in the fridge, crying until your tears turn to ice. (You perish in the freezer)",
+    choices : [
+    ]
+  },
+
+  chef4ba : {
+    question : "You recognized the noise, it was the noise of a pigeon in a bird bath. You run to the cellar door, and see a bird sitting there in the bath, but just as you do, you hear the trainer. Do you capture the pigeon, or do you talk to the trainer?",
+    choices : [
+      ["Capture the pigeon", "chef5baa"],
+      ["Talk to the trainer", "chef5bab"]
+    ]
+  },
+
+  chef4bb : {
+    question : "You continue sweeping the floor, and cleaning the rest of the restaurant until it is the morning. You wondered what the sound might have been, but after working for a while you begin to forget. The sun soon begins to rise, and you notice that the trainer has arrived far earlier than usual. Do you go say hello to the trainer or do you continue sweeping?",
+    choices : [
+      ["Say hello to the trainer", "chef5bba"],
+      ["Continue sweeping", "chefEnd5bbb"]
+    ]
+  },
+
+  chef5bba : {
+    question : "You head over to the trainer and ask him what he is doing here so early. He tells you he is going to start a circus. You don’t say much to him, but as he begins to leave he asks if you would like to join him in becoming a circus. Just then you also notice Peter sitting on the back of the trainers sack, filled with all the trainer’s belongings. Do you take capture Peter, or do you join the circus?",
+    choices : [
+      ["Join the circus", "chefEnd6bbaa"],
+      ["Capture Peter", "chefEnd6bbab"]
+    ]
+  },
+
+  chefEnd6bbaa : {
+    question : "You have a sudden impulse to grab the pigeon that is Peter, but you resist it. Just as the trainer begins to leave, you tell him that you would love to join the circus. You begin walking with him and you perform for the circus. Over time, your morbid hatred for pigeons begins to lessen, as the trainer shows you the beauty of pigeons during your time at the circus. (You perform in the circus)",
+    choices : [
+    ]
+  },
+
+  chefEnd6bbab : {
+    question : "A powerful feeling comes over you, and a large rage begins to fuel with in you. Just as the trainer turns his back, you grab Peter of his sack and run inside the restaurant with Peter. The trainer spent the rest of his days looking for Peter, but he never saw him again. (A circus without Peter)",
+    choices : [
+    ]
+  },
+
+  chefEnd5bbb : {
+    question : "You continue sweeping the floor, one sweep at a time, and when you look to see where the trainer is, he is gone, but you don’t mind it, you just keep sweeping, and once customers arrive, you serve them some food, and although you never saw the trainer or Peter ever again, it was still as if they never left. (Premature ending)",
+    choices : [
+    ]
+  },
+
+  chef5baa : {
+    question : "You heard the trainer, but you don’t care. Every pigeon counts, and you won’t let this one get away. You run towards the bird bath, and the pigeon tries to fly away, but you’re too quick. You snatch the pigeon and head back into the restaurant, making sure no one saw you. Do you put the pigeon in the freezer, or do you train the pigeon to do tricks.",
+    choices : [
+      ["Put the pigeon in the freezer", "chefEnd6baba1"],
+      ["Trainer the pigeon to do tricks", "chefEnd6babb1"]
+    ]
+  },
+
+  chefEnd6baba1 : {
+    question : "You put the pigeon in the freezer. You step into the freezer, and you tie the pigeon to rail within the freezer. In the freezer laid hundreds of pigeons, as you would use them to cook you delicious food for the restaurant. You watch as the pigeon slowly begins to die and as you do, you take great pleasure in it. You sit there watching, not realizing that the freezer door had closed, and you are now locked in. You do not care though, as you slowly die. (You perish in the freezer)",
+    choices : [
+    ]
+  },
+
+  chefEnd6babb1 : {
+    question : "You train the pigeon to do tricks, and as you do, you begin to realize that you have somewhat of a knack for training birds. You name the pigeon Christopher, and you eventually love performing tricks with him so much, that you leave your restaurant entirely, to go start a circus. (You perform in the circus)",
+    choices : [
+    ]
+  },
+
+  chef5bab : {
+    question : " You know you won’t have time to take the pigeon so you go over to see what the trainer wants. You comfort him, and have a short conversation. The trainer was looking for Peter the pigeon, but when he asks you if you had seen him lately, you say you haven’t. He looks at you suspiciously, for you should not be at the restaurant right now. Do you continue talking to the trainer, or do you end the conversation?",
+    choices : [
+      ["End the conversation", "chefEnd6baba"],
+      ["Continue talking", "chefEnd6babb"]
+    ]
+  },
+
+  chefEnd6baba : {
+    question : "You abruptly end the conversation, and the trainer can tell something is up with you. The trainer pretends to leave, and you head back to the bird bath to capture the pigeon. The pigeon tries to fly away, but you are too quick. You snatch the pigeon and head back into the restaurant, not realizing that the trainer saw you. You put the pigeon in the freezer, but when you turn around to leave, you see that the trainer had closed the door behind you. (You perish in the freezer)",
+    choices : [
+    ]
+  },
+
+  chefEnd6babb : {
+    question : "You continue talking to the trainer, and the trainer begins to believe that you truly have no idea where Peter was. You continue talking and you talk about how you would like to one day perform and train with a pigeon. The trainer continues talking to the chef about all the techniques of training a bird, and he eventually offers if you would like to help him out with the show. You accept and before you know it, you are just as talented as the trainer, and Peter the pigeon was found the next morning, sleeping on one of the perches on the restaurant. The three of you enjoy years of performing for the circus. (You perform in the circus)",
+    choices : [
     ]
   }
 }
@@ -192,6 +579,15 @@ h1{
   background-color: #444;
   color: #fff;
 }
+
+h2{
+  font-weight: 300;
+  margin: 0px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
 p{
   font-weight: 300;
   margin: 0px;
@@ -221,7 +617,7 @@ resetButton{
   color: #fff;
   border: 0px;
   border-radius: 3px;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
   margin-bottom: px;
 }
