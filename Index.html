@@ -516,7 +516,7 @@ let storyContainer = document.getElementById("exposistion");
     
 let buttonContainer = document.getElementById("buttons");
 
-function showText(){
+function displayText(){
   var currentTextId = history[history.length - 1];
   buttonContainer.innerHTML = "";
   storyContainer.innerHTML = "";
@@ -536,7 +536,7 @@ function showOption(decision, choice){//shows the specified text, options and st
   button.innerHTML = decision;
   button.addEventListener ("click", function() {
     history.push(choice);
-    showText();
+    displayText();
   });
 }
 
@@ -556,7 +556,7 @@ function createText(story) {
   storyContainer.appendChild(storyItem);
 }
   
-  showText();
+  displayText();
   
 </script>
       
