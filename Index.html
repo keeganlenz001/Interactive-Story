@@ -525,12 +525,12 @@ function showText(){
     showOption(choice[0], choice[1])
   }
 
-  for(var textId of history){ 
+  for(var textId of history){ //creates the story layout with set ID for each choice and story outcome
     createText(story[textId].question); 
   }
 }
 
-function showOption(decision, choice){
+function showOption(decision, choice){//shows the specified text, options and story outcomes
   var button = document.createElement("button");
   buttonContainer.appendChild(button);
   button.innerHTML = decision;
@@ -541,13 +541,13 @@ function showOption(decision, choice){
 }
 
 var button = document.createElement("resetButton");
-button.innerHTML = "Restart";
+button.innerHTML = "Restart";//assigns a button to the html site and start the choice options to be reset and re-assign a new value
 
 var body = document.getElementsByTagName("body")[0];
 body.appendChild(button);
 
 button.addEventListener ("click", function() {
-  location.reload();
+  location.reload();//allows for functional buttons and enable them to perform and action once clicked
 });
 
 function createText(story) {
